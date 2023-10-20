@@ -13,8 +13,20 @@ export class AppService {
 
     async loginByAuth({email, password}) {
         try {
-            const token = await Gatekeeper.loginByAuth(email, password);
+            const token = await Gatekeeper.loginByAuth(email, password);           
             localStorage.setItem('token', token);
+            await this.getProfile();
+            this.router.navigate(['/']);
+            this.toastr.success('Login success');
+        } catch (error) {
+            this.toastr.error(error.message);
+        }
+    }
+
+
+    async loginByAuth2({email, password}) {
+        try {    
+            localStorage.setItem('token', email);
             await this.getProfile();
             this.router.navigate(['/']);
             this.toastr.success('Login success');
@@ -85,7 +97,8 @@ export class AppService {
 
     async getProfile() {
         try {
-            this.user = await Gatekeeper.getProfile();
+            //this.user = await Gatekeeper.getProfile();
+            this.user = "Fraank";
         } catch (error) {
             this.logout();
             throw error;

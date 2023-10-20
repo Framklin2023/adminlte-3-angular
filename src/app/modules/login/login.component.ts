@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit, OnDestroy {
             this.isAuthLoading = true;
             console.log("entro");
             console.log(this.loginForm.value);
-            await this.appService.loginByAuth(this.loginForm.value);
+            await this.appService.loginByAuth2(this.loginForm.value);
             this.isAuthLoading = false;
         } else {
             this.toastr.error('Form is not valid!');
