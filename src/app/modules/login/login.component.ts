@@ -41,7 +41,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     async loginByAuth() {
         if (this.loginForm.valid) {
             this.isAuthLoading = true;
-            await this.appService.loginByAuth(this.loginForm.value);
+            //await this.appService.loginByAuth(this.loginForm.value);
+            await this.appService.loginByAuth({'username':'jose1','password':'123456'});
             this.isAuthLoading = false;
         } else {
             this.toastr.error('Form is not valid!');

@@ -38,6 +38,11 @@ export const MENU = [
         path: ['/']
     },
     {
+        name: 'Info',
+        iconClasses: 'fas fa-file',
+        path: ['/info']
+    },
+    {
         name: 'Blank',
         iconClasses: 'fas fa-file',
         path: ['/blank']
@@ -55,7 +60,7 @@ export const MENU = [
                 name: 'Blank',
                 iconClasses: 'fas fa-file',
                 path: ['/sub-menu-2']
-            }
+            },
         ]
     }
 ];
