@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {MainComponent} from '@modules/main/main.component';
 import {BlankComponent} from '@pages/blank/blank.component';
+import {AltasComponent} from '@pages/altas/altas.component';
+import {InfoComponent} from '@pages/info/info.component';
 import {LoginComponent} from '@modules/login/login.component';
 import {ProfileComponent} from '@pages/profile/profile.component';
 import {RegisterComponent} from '@modules/register/register.component';
@@ -12,6 +14,8 @@ import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {MainMenuComponent} from '@pages/main-menu/main-menu.component';
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
+
+
 
 const routes: Routes = [
     {
@@ -27,6 +31,14 @@ const routes: Routes = [
             {
                 path: 'blank',
                 component: BlankComponent
+            },
+            {
+                path: 'altas',
+                component: AltasComponent
+            },
+            {
+                path: 'info',
+                component: InfoComponent
             },
             {
                 path: 'sub-menu-1',
